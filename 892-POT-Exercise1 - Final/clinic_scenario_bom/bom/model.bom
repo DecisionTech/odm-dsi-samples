@@ -1,0 +1,280 @@
+property uuid "ebef597c-efd1-41df-aea0-c77d746d427d"
+property bdl_generated "true"
+package clinic_scenario;
+
+
+public class Clinic
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.entityElementName" "Clinic"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public string name
+                property "ia.entity.id" "true"
+                property update "true"
+                property "xsd.name" "name"
+                property "xsd.order" "0";
+    public double numberOfRooms
+                property update "true"
+                property "xsd.name" "numberOfRooms"
+                property "xsd.order" "1";
+    public double numberOfRoomsINUSE
+                property update "true"
+                property "xsd.name" "numberOfRoomsINUSE"
+                property "xsd.order" "2";
+    public double numberOfRoomsNOTREADY
+                property update "true"
+                property "xsd.name" "numberOfRoomsNOTREADY"
+                property "xsd.order" "3";
+    public double numberOfRoomsREADY
+                property update "true"
+                property "xsd.name" "numberOfRoomsREADY"
+                property "xsd.order" "4";
+    public string specialty
+                property update "true"
+                property "xsd.name" "specialty"
+                property "xsd.order" "5";
+    public double waitingRoomCapacity
+                property update "true"
+                property "xsd.name" "waitingRoomCapacity"
+                property "xsd.order" "6";
+    public Clinic(string name)
+                property "dataio.default" "true";
+    public Clinic(string name, double numberOfRooms, double numberOfRoomsINUSE, double numberOfRoomsNOTREADY, double numberOfRoomsREADY, string specialty, double waitingRoomCapacity)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class ClinicAlert
+        extends clinic_scenario.ClinicEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "ClinicAlert"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public string message
+                property "xsd.name" "message"
+                property "xsd.order" "0";
+    public clinic_scenario.RiskLevel riskLevel
+                property "xsd.name" "riskLevel"
+                property "xsd.order" "1";
+    public ClinicAlert(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public ClinicAlert(string message, clinic_scenario.RiskLevel riskLevel, clinic_scenario.Clinic clinic, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class ClinicEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "ClinicEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public clinic_scenario.Clinic clinic
+                property "xsd.name" "clinic"
+                property "xsd.order" "0"
+                property "xsd.useMapping" "true";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "1";
+    public ClinicEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public ClinicEvent(clinic_scenario.Clinic clinic, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PatientEntersRoomEvent
+        extends clinic_scenario.RoomEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PatientEntersRoomEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public PatientEntersRoomEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PatientEntersRoomEvent(clinic_scenario.Clinic clinic, clinic_scenario.Room room, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class PatientLeavesRoomEvent
+        extends clinic_scenario.RoomEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "PatientLeavesRoomEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public PatientLeavesRoomEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public PatientLeavesRoomEvent(clinic_scenario.Clinic clinic, clinic_scenario.Room room, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class RiskLevel
+        property "de.generated" "true"
+        property "ia.enum" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    domain {static LOW_RISK, static AT_RISK, static HIGH_RISK}
+    public static final readonly clinic_scenario.RiskLevel AT_RISK
+                property "xsd.name" "AT_RISK"
+                property "xsd.order" "0";
+    public static final readonly clinic_scenario.RiskLevel HIGH_RISK
+                property "xsd.name" "HIGH_RISK"
+                property "xsd.order" "1";
+    public static final readonly clinic_scenario.RiskLevel LOW_RISK
+                property "xsd.name" "LOW_RISK"
+                property "xsd.order" "2";
+}
+
+public class Room
+        implements com.ibm.ia.model.Entity
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.entityElementName" "Room"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public clinic_scenario.Clinic clinic
+                property update "true"
+                property "xsd.name" "clinic"
+                property "xsd.order" "0"
+                property "xsd.useMapping" "true";
+    public string roomNumber
+                property "ia.entity.id" "true"
+                property update "true"
+                property "xsd.name" "roomNumber"
+                property "xsd.order" "1";
+    public clinic_scenario.RoomStatus roomStatus
+                property update "true"
+                property "xsd.name" "roomStatus"
+                property "xsd.order" "2";
+    public Room(string roomNumber)
+                property "dataio.default" "true";
+    public Room(clinic_scenario.Clinic clinic, string roomNumber, clinic_scenario.RoomStatus roomStatus)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class RoomEvent
+        implements com.ibm.ia.model.Event
+        property "brl.facets" "ilog.rules.brl.Date:timestamp"
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "RoomEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public clinic_scenario.Clinic clinic
+                property "xsd.name" "clinic"
+                property "xsd.order" "0"
+                property "xsd.useMapping" "true";
+    public clinic_scenario.Room room
+                property "xsd.name" "room"
+                property "xsd.order" "1"
+                property "xsd.useMapping" "true";
+    public final clinic_scenario.RoomStatus targetRoomStatus
+                property "xsd.name" "targetRoomStatus"
+                property "xsd.order" "2";
+    public java.time.ZonedDateTime timestamp
+                property "ia.timestamp" "true"
+                property "xsd.name" "timestamp"
+                property "xsd.order" "3";
+    public RoomEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public RoomEvent(clinic_scenario.Clinic clinic, clinic_scenario.Room room, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class RoomIsReadyEvent
+        extends clinic_scenario.RoomEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "RoomIsReadyEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public RoomIsReadyEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public RoomIsReadyEvent(clinic_scenario.Clinic clinic, clinic_scenario.Room room, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class RoomStatus
+        property "de.generated" "true"
+        property "ia.enum" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    domain {static READY, static NOT_READY, static IN_USE}
+    public static final readonly clinic_scenario.RoomStatus IN_USE
+                property "xsd.name" "IN_USE"
+                property "xsd.order" "0";
+    public static final readonly clinic_scenario.RoomStatus NOT_READY
+                property "xsd.name" "NOT_READY"
+                property "xsd.order" "1";
+    public static final readonly clinic_scenario.RoomStatus READY
+                property "xsd.name" "READY"
+                property "xsd.order" "2";
+}
+
+public class RoomStatusChangeEvent
+        extends clinic_scenario.ClinicEvent
+        property "de.generated" "true"
+        property "xsd.definedNamespaces" ""
+        property "xsd.eventElementName" "RoomStatusChangeEvent"
+        property "xsd.fileName" "model.xsd"
+        property "xsd.support" "true"
+        property "xsd.targetNamespace" "http://www.ibm.com/ia/xmlns/default/clinic_scenario_bom/model"
+{
+    public clinic_scenario.Room room
+                property "xsd.name" "room"
+                property "xsd.order" "0"
+                property "xsd.useMapping" "true";
+    public clinic_scenario.RoomStatus targetStatus
+                property "xsd.name" "targetStatus"
+                property "xsd.order" "1";
+    public RoomStatusChangeEvent(java.time.ZonedDateTime timestamp)
+                property "dataio.default" "true";
+    public RoomStatusChangeEvent(clinic_scenario.Room room, clinic_scenario.RoomStatus targetStatus, clinic_scenario.Clinic clinic, java.time.ZonedDateTime timestamp)
+                property groups "BALA"
+                property prototype "true";
+}
+
+public class Speciality
+        property "de.generated" "true"
+        property "ia.enum" "true"
+{
+    domain {static GENERAL, static LAB, static RADIOLOGY}
+    public static final readonly clinic_scenario.Speciality GENERAL;
+    public static final readonly clinic_scenario.Speciality LAB;
+    public static final readonly clinic_scenario.Speciality RADIOLOGY;
+}
+

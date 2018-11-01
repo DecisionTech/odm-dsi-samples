@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>Patient Enters Room</name>
+  <uuid>803af9b3-9175-41f9-b5d8-77db1e924423</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a patient enters room event occurs 
+if
+	the room status of 'the room' is READY 
+then 
+	set the room status of 'the room' to IN_USE  ; 
+	emit a new room status change event where 
+		the room is the room of this patient enters room event , 
+		the clinic is the clinic of this patient enters room event , 
+		the target status is IN_USE ; 
+else 
+	emit a new clinic alert where 
+ 		the clinic is the clinic of 'the room' ,
+ 		the message is the room number of 'the room' + " is not ready and patient has entered!" ;
+]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

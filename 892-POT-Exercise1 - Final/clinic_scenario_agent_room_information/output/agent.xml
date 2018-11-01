@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><agent xmlns="http://www.ibm.com/ia/AgentDescriptor">
+  <name>clinic_scenario_agent_room_information</name>
+  <kind>Rule</kind>
+  <entity>clinic_scenario.Room</entity>
+  <events>
+    <event>
+      <type>clinic_scenario.RoomEvent</type>
+      <mapping>{0}.room.get$Id()</mapping>
+    </event>
+  </events>
+</agent>

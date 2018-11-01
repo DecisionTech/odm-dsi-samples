@@ -1,0 +1,99 @@
+uuid = 02872e84-2382-47bf-af0a-cb8a1a2c7f84
+# clinic_scenario.Clinic
+clinic_scenario.Clinic#concept.label = clinic
+clinic_scenario.Clinic.Clinic(java.lang.String,double,double,double,double,java.lang.String,double)#phrase.navigation = a new {clinic} where {0, name} {1, number of rooms} {2, number of rooms IN_USE} {3, number of rooms NOT_READY} {4, number of rooms READY} {5, specialty} {6, waiting room capacity} 
+clinic_scenario.Clinic.name#phrase.navigation = {name} of {this}
+clinic_scenario.Clinic.numberOfRooms#phrase.action = set the number of rooms of {this} to {number of rooms}
+clinic_scenario.Clinic.numberOfRooms#phrase.navigation = {number of rooms} of {this}
+clinic_scenario.Clinic.numberOfRoomsINUSE#phrase.action = set the number of rooms IN_USE of {this} to {number of rooms IN_USE}
+clinic_scenario.Clinic.numberOfRoomsINUSE#phrase.navigation = {number of rooms IN_USE} of {this}
+clinic_scenario.Clinic.numberOfRoomsNOTREADY#phrase.action = set the number of rooms NOT_READY of {this} to {number of rooms NOT_READY}
+clinic_scenario.Clinic.numberOfRoomsNOTREADY#phrase.navigation = {number of rooms NOT_READY} of {this}
+clinic_scenario.Clinic.numberOfRoomsREADY#phrase.action = set the number of rooms READY of {this} to {number of rooms READY}
+clinic_scenario.Clinic.numberOfRoomsREADY#phrase.navigation = {number of rooms READY} of {this}
+clinic_scenario.Clinic.specialty#phrase.action = set the specialty of {this} to {specialty}
+clinic_scenario.Clinic.specialty#phrase.navigation = {specialty} of {this}
+clinic_scenario.Clinic.waitingRoomCapacity#phrase.action = set the waiting room capacity of {this} to {waiting room capacity}
+clinic_scenario.Clinic.waitingRoomCapacity#phrase.navigation = {waiting room capacity} of {this}
+
+# clinic_scenario.ClinicAlert
+clinic_scenario.ClinicAlert#concept.label = clinic alert
+clinic_scenario.ClinicAlert.ClinicAlert(java.lang.String,clinic_scenario.RiskLevel,clinic_scenario.Clinic,java.time.ZonedDateTime)#phrase.navigation = a new {clinic alert} where {0, message} {1, risk level} {2, clinic} {3, timestamp} 
+clinic_scenario.ClinicAlert.message#phrase.action = set the message of {this} to {message}
+clinic_scenario.ClinicAlert.message#phrase.navigation = {message} of {this}
+clinic_scenario.ClinicAlert.riskLevel#phrase.action = set the risk level of {this} to {risk level}
+clinic_scenario.ClinicAlert.riskLevel#phrase.clearer = clear the risk level of {this}
+clinic_scenario.ClinicAlert.riskLevel#phrase.navigation = {risk level} of {this}
+
+# clinic_scenario.ClinicEvent
+clinic_scenario.ClinicEvent#concept.label = clinic event
+clinic_scenario.ClinicEvent.ClinicEvent(clinic_scenario.Clinic,java.time.ZonedDateTime)#phrase.navigation = a new {clinic event} where {0, clinic} {1, timestamp} 
+clinic_scenario.ClinicEvent.clinic#phrase.action = set the clinic of {this} to {clinic}
+clinic_scenario.ClinicEvent.clinic#phrase.clearer = clear the clinic of {this}
+clinic_scenario.ClinicEvent.clinic#phrase.navigation = {clinic} of {this}
+clinic_scenario.ClinicEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+clinic_scenario.ClinicEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# clinic_scenario.PatientEntersRoomEvent
+clinic_scenario.PatientEntersRoomEvent#concept.label = patient enters room event
+clinic_scenario.PatientEntersRoomEvent.PatientEntersRoomEvent(clinic_scenario.Clinic,clinic_scenario.Room,java.time.ZonedDateTime)#phrase.navigation = a new {patient enters room event} where {0, clinic} {1, room} {2, timestamp} 
+
+# clinic_scenario.PatientLeavesRoomEvent
+clinic_scenario.PatientLeavesRoomEvent#concept.label = patient leaves room event
+clinic_scenario.PatientLeavesRoomEvent.PatientLeavesRoomEvent(clinic_scenario.Clinic,clinic_scenario.Room,java.time.ZonedDateTime)#phrase.navigation = a new {patient leaves room event} where {0, clinic} {1, room} {2, timestamp} 
+
+# clinic_scenario.RiskLevel
+clinic_scenario.RiskLevel#concept.label = risk level
+clinic_scenario.RiskLevel.AT_RISK#instance.label = AT RISK
+clinic_scenario.RiskLevel.HIGH_RISK#instance.label = HIGH RISK
+clinic_scenario.RiskLevel.LOW_RISK#instance.label = LOW RISK
+
+# clinic_scenario.Room
+clinic_scenario.Room#concept.label = room
+clinic_scenario.Room.Room(clinic_scenario.Clinic,java.lang.String,clinic_scenario.RoomStatus)#phrase.navigation = a new {room} where {0, clinic} {1, room number} {2, room status} 
+clinic_scenario.Room.clinic#phrase.action = set the clinic of {this} to {clinic}
+clinic_scenario.Room.clinic#phrase.clearer = clear the clinic of {this}
+clinic_scenario.Room.clinic#phrase.navigation = {clinic} of {this}
+clinic_scenario.Room.roomNumber#phrase.navigation = {room number} of {this}
+clinic_scenario.Room.roomStatus#phrase.action = set the room status of {this} to {room status}
+clinic_scenario.Room.roomStatus#phrase.clearer = clear the room status of {this}
+clinic_scenario.Room.roomStatus#phrase.navigation = {room status} of {this}
+
+# clinic_scenario.RoomEvent
+clinic_scenario.RoomEvent#concept.label = room event
+clinic_scenario.RoomEvent.RoomEvent(clinic_scenario.Clinic,clinic_scenario.Room,java.time.ZonedDateTime)#phrase.navigation = a new {room event} where {0, clinic} {1, room} {2, timestamp} 
+clinic_scenario.RoomEvent.clinic#phrase.action = set the clinic of {this} to {clinic}
+clinic_scenario.RoomEvent.clinic#phrase.clearer = clear the clinic of {this}
+clinic_scenario.RoomEvent.clinic#phrase.navigation = {clinic} of {this}
+clinic_scenario.RoomEvent.room#phrase.action = set the room of {this} to {room}
+clinic_scenario.RoomEvent.room#phrase.clearer = clear the room of {this}
+clinic_scenario.RoomEvent.room#phrase.navigation = {room} of {this}
+clinic_scenario.RoomEvent.targetRoomStatus#phrase.navigation = {target room status} of {this}
+clinic_scenario.RoomEvent.timestamp#phrase.action = set the timestamp of {this} to {timestamp}
+clinic_scenario.RoomEvent.timestamp#phrase.navigation = {timestamp} of {this}
+
+# clinic_scenario.RoomIsReadyEvent
+clinic_scenario.RoomIsReadyEvent#concept.label = room is ready event
+clinic_scenario.RoomIsReadyEvent.RoomIsReadyEvent(clinic_scenario.Clinic,clinic_scenario.Room,java.time.ZonedDateTime)#phrase.navigation = a new {room is ready event} where {0, clinic} {1, room} {2, timestamp} 
+
+# clinic_scenario.RoomStatus
+clinic_scenario.RoomStatus#concept.label = room status
+clinic_scenario.RoomStatus.IN_USE#instance.label = IN_USE
+clinic_scenario.RoomStatus.NOT_READY#instance.label = NOT READY
+clinic_scenario.RoomStatus.READY#instance.label = READY
+
+# clinic_scenario.RoomStatusChangeEvent
+clinic_scenario.RoomStatusChangeEvent#concept.label = room status change event
+clinic_scenario.RoomStatusChangeEvent.RoomStatusChangeEvent(clinic_scenario.Room,clinic_scenario.RoomStatus,clinic_scenario.Clinic,java.time.ZonedDateTime)#phrase.navigation = a new {room status change event} where {0, room} {1, target status} {2, clinic} {3, timestamp} 
+clinic_scenario.RoomStatusChangeEvent.room#phrase.action = set the room of {this} to {room}
+clinic_scenario.RoomStatusChangeEvent.room#phrase.clearer = clear the room of {this}
+clinic_scenario.RoomStatusChangeEvent.room#phrase.navigation = {room} of {this}
+clinic_scenario.RoomStatusChangeEvent.targetStatus#phrase.action = set the target status of {this} to {target status}
+clinic_scenario.RoomStatusChangeEvent.targetStatus#phrase.clearer = clear the target status of {this}
+clinic_scenario.RoomStatusChangeEvent.targetStatus#phrase.navigation = {target status} of {this}
+
+# clinic_scenario.Speciality
+clinic_scenario.Speciality#concept.label = speciality
+clinic_scenario.Speciality.GENERAL#instance.label = GENERAL
+clinic_scenario.Speciality.LAB#instance.label = LAB
+clinic_scenario.Speciality.RADIOLOGY#instance.label = RADIOLOGY
