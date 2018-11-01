@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><impactTables>
+    <ruleTable>
+        <vocElt id="clinic_scenario.Room/roomNumber/GETTER#0">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.Room/roomStatus/GETTER#0">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.RoomStatusChangeEvent/RoomStatusChangeEvent(clinic_scenario.Room,clinic_scenario.RoomStatus,clinic_scenario.Clinic,java.time.ZonedDateTime)/NAVIGATION#0">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.RoomEvent/clinic/GETTER#0">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.Room/clinic/GETTER#0">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.RoomStatus/IN_USE">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.ClinicAlert/ClinicAlert(java.lang.String,clinic_scenario.RiskLevel,clinic_scenario.Clinic,java.time.ZonedDateTime)/NAVIGATION#0">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.RoomEvent/room/GETTER#0">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.RoomStatus">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.RoomStatus/READY">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.Room">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.Room/roomStatus/SETTER#0">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+        <vocElt id="clinic_scenario.PatientEntersRoomEvent">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocElt>
+    </ruleTable>
+    <vocTable>
+        <rule id="803af9b3-9175-41f9-b5d8-77db1e924423">
+            <vocElt id="clinic_scenario.Room/roomNumber/GETTER#0"/>
+            <vocElt id="clinic_scenario.Room/roomStatus/GETTER#0"/>
+            <vocElt id="clinic_scenario.RoomStatusChangeEvent/RoomStatusChangeEvent(clinic_scenario.Room,clinic_scenario.RoomStatus,clinic_scenario.Clinic,java.time.ZonedDateTime)/NAVIGATION#0"/>
+            <vocElt id="clinic_scenario.RoomEvent/clinic/GETTER#0"/>
+            <vocElt id="clinic_scenario.Room/clinic/GETTER#0"/>
+            <vocElt id="clinic_scenario.RoomStatus/IN_USE"/>
+            <vocElt id="clinic_scenario.ClinicAlert/ClinicAlert(java.lang.String,clinic_scenario.RiskLevel,clinic_scenario.Clinic,java.time.ZonedDateTime)/NAVIGATION#0"/>
+            <vocElt id="clinic_scenario.RoomEvent/room/GETTER#0"/>
+            <vocElt id="clinic_scenario.RoomStatus"/>
+            <vocElt id="clinic_scenario.RoomStatus/READY"/>
+            <vocElt id="clinic_scenario.Room"/>
+            <vocElt id="clinic_scenario.Room/roomStatus/SETTER#0"/>
+            <vocElt id="clinic_scenario.PatientEntersRoomEvent"/>
+        </rule>
+    </vocTable>
+    <ruleParamTable>
+        <param id="entity">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </param>
+    </ruleParamTable>
+    <paramTable>
+        <rule id="803af9b3-9175-41f9-b5d8-77db1e924423">
+            <param id="entity"/>
+        </rule>
+    </paramTable>
+    <projectTable>
+        <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+    </projectTable>
+    <variableTable/>
+    <ruleVocFileTable>
+        <vocFile file="/clinic_scenario_bom/bom/model_en_US.voc" id="02872e84-2382-47bf-af0a-cb8a1a2c7f84">
+            <rule id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        </vocFile>
+    </ruleVocFileTable>
+    <resourceTable>
+        <resource file="/clinic_scenario_agent_room_information/rules/Patient Enters Room.brl" id="803af9b3-9175-41f9-b5d8-77db1e924423"/>
+        <resource file="/clinic_scenario_agent_room_information" id="04166764-c79d-4ffe-aec5-019098be3a3d"/>
+    </resourceTable>
+</impactTables>

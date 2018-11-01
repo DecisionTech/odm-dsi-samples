@@ -1,0 +1,24 @@
+# List of external plug-in models previously loaded. Timestamp: 1540833909627
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.agent_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.analytics.tooling.gen_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.analytics_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.common_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.connectivity.management_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.engine.engine-api_1.4.1.CIS2018-02-15T160519Z.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.engine.engine-runtime_1.40.6.CIS2018-02-15T160519Z.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.extension_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.gateway.client_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.gateway_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.scoring_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.ia.wxs.client_8.9.2.0.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.core.6.0.0_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.cm.1.5.0_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.component.1.3.0_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.component.annotations.1.3.0_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.coordinator.1.0.2_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.event.1.3.1_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.log.1.3.0_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.metatype.1.3.0_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.metatype.annotations.1.3.0_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/com.ibm.wsspi.org.osgi.service.subsystem.1.1.0_1.0.12.cl50920160227-1523.jar
+file:/C:/IBM/ODM/ODMInsights89/CIS-runtime-target-platform/plugins/org.eclipse.osgi_0.0.0.fake/
