@@ -1,10 +1,11 @@
-property uuid "ebef597c-efd1-41df-aea0-c77d746d427d"
+
 property bdl_generated "true"
+property uuid "ebef597c-efd1-41df-aea0-c77d746d427d"
 package clinic_scenario;
 
 
 public class Clinic
-        implements com.ibm.ia.model.Entity
+        extends com.ibm.ia.model.Entity
         property "de.generated" "true"
         property "xsd.definedNamespaces" ""
         property "xsd.entityElementName" "Clinic"
@@ -71,7 +72,7 @@ public class ClinicAlert
 }
 
 public class ClinicEvent
-        implements com.ibm.ia.model.Event
+        extends com.ibm.ia.model.Event
         property "brl.facets" "ilog.rules.brl.Date:timestamp"
         property "de.generated" "true"
         property "xsd.definedNamespaces" ""
@@ -148,7 +149,7 @@ public class RiskLevel
 }
 
 public class Room
-        implements com.ibm.ia.model.Entity
+        extends com.ibm.ia.model.Entity
         property "de.generated" "true"
         property "xsd.definedNamespaces" ""
         property "xsd.entityElementName" "Room"
@@ -167,7 +168,6 @@ public class Room
                 property "xsd.name" "roomNumber"
                 property "xsd.order" "1";
     public clinic_scenario.RoomStatus roomStatus
-                property update "true"
                 property "xsd.name" "roomStatus"
                 property "xsd.order" "2";
     public Room(string roomNumber)
@@ -178,7 +178,7 @@ public class Room
 }
 
 public class RoomEvent
-        implements com.ibm.ia.model.Event
+        extends com.ibm.ia.model.Event
         property "brl.facets" "ilog.rules.brl.Date:timestamp"
         property "de.generated" "true"
         property "xsd.definedNamespaces" ""
@@ -195,7 +195,7 @@ public class RoomEvent
                 property "xsd.name" "room"
                 property "xsd.order" "1"
                 property "xsd.useMapping" "true";
-    public final clinic_scenario.RoomStatus targetRoomStatus
+    public final readonly clinic_scenario.RoomStatus targetRoomStatus
                 property "xsd.name" "targetRoomStatus"
                 property "xsd.order" "2";
     public java.time.ZonedDateTime timestamp

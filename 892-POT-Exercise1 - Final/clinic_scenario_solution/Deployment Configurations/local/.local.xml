@@ -9,7 +9,7 @@
 		<server name="cisDev" >
 			<local/> 
 			<role>development</role>
-			<adminToolkitLocation>C:\IBM\ODM\ODMInsights89\runtime\ia\bin</adminToolkitLocation>
+			<adminToolkitLocation>C:\IBM\ODM89-DSI\runtime\ia\bin</adminToolkitLocation>
 			<secureStoragePath>local_1</secureStoragePath>
 		</server>
 	</environment>

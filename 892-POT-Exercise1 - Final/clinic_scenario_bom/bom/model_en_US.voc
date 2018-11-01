@@ -1,4 +1,6 @@
+# Vocabulary Properties
 uuid = 02872e84-2382-47bf-af0a-cb8a1a2c7f84
+
 # clinic_scenario.Clinic
 clinic_scenario.Clinic#concept.label = clinic
 clinic_scenario.Clinic.Clinic(java.lang.String,double,double,double,double,java.lang.String,double)#phrase.navigation = a new {clinic} where {0, name} {1, number of rooms} {2, number of rooms IN_USE} {3, number of rooms NOT_READY} {4, number of rooms READY} {5, specialty} {6, waiting room capacity} 
