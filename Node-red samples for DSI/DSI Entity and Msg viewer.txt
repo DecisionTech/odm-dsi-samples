@@ -1,0 +1,2 @@
+
+[{"id":"588e3a2e.ac4484","type":"ui_template","z":"29179d92.0d7652","group":"395b5085.357b3","name":"Messages","order":3,"width":"6","height":"2","format":"<h2 ng-if=\"true\">Clinic Alerts</h2>\n{{ msg.payload.message }}\n","storeOutMessages":false,"fwdInMessages":true,"templateScope":"local","x":870,"y":440,"wires":[[]]},{"id":"395b5085.357b3","type":"ui_group","z":"","name":"","tab":"56db8743.2cadd8","order":1,"disp":true,"width":"6","collapse":false},{"id":"56db8743.2cadd8","type":"ui_tab","z":"","name":"Entity Viewer","icon":"dashboard","order":2}]
