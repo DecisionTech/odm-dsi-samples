@@ -1,0 +1,23 @@
+define 'College Park' as a new clinic where
+	the name is "College Park Physicians",	
+	the number of rooms NOT_READY is 0,
+	the number of rooms is 3,
+	the number of rooms READY is 3,
+	the number of rooms IN_USE is 0,	
+	the specialty is "General Medicine", 
+	the waiting room capacity is 10;
+	
+define 'room1' as a new room where 
+	the room number is "Room 1" ,
+	the room status is READY,
+	the clinic is 'College Park'  ;
+	
+define 'room2' as a new room where 
+	the room number is "Room 2" ,
+	the room status is READY ,
+	the clinic is 'College Park'  ;
+
+define 'room3' as a new room where 
+	the room number is "Room 3" ,
+	the room status is READY ,
+the clinic is 'College Park'  ;
