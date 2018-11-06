@@ -1,0 +1,8 @@
+when a patient leaves room event occurs 
+
+then 
+	set the room status of 'the room' to NOT READY  ;
+	emit a new room status change event where 
+		the clinic is the clinic of this patient leaves room event ,
+		the room is the room of this patient leaves room event  , 
+		the target status is NOT READY ;
