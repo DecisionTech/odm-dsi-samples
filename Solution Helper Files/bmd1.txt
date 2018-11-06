@@ -1,0 +1,34 @@
+a clinic is a business entity identified by an name.
+a speciality can be one of : GENERAL, LAB, RADIOLOGY.
+a clinic has a specialty.
+a clinic has a number of rooms (numeric).
+a clinic has a number of rooms READY (numeric).
+a clinic has a number of rooms NOT_READY (numeric).
+a clinic has a number of rooms IN_USE (numeric).
+a clinic has a waiting room capacity (numeric).
+
+a room is a business entity identified by a room number.
+a room status can be one of : READY, NOT READY, IN_USE.
+a room has a room status.
+a room is related to a clinic .
+
+a room event is a business event time-stamped by a timestamp.
+a room event is related to a room.
+a room event is related to a clinic.
+a room event has a target room status (a room status ) .
+
+a patient enters room event is a room event.
+a patient leaves room event is a room event.
+a room is ready event is a room event.
+
+a clinic event is a business event time-stamped by a timestamp.
+a clinic event is related to a clinic.
+
+a room status change event is a clinic event.
+a room status change event has a target status (a room status).
+a room status change event is related to a room .
+
+a clinic alert is a clinic event.
+a clinic alert has a message.
+a clinic alert has a risk level.
+a risk level can be one of : LOW RISK, AT RISK, HIGH RISK.
