@@ -1,0 +1,5 @@
+using definitions from "exercise 1 entities"  ;
+load 'College Park' ;
+load room1 ;
+load room2 ;
+load room3 ;

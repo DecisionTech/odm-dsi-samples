@@ -1,0 +1,8 @@
+when a room is ready event occurs 
+
+then 
+	set the room status of 'the room' to READY ;
+	emit a new room status change event where 
+		the clinic is the clinic of this room is ready event , 
+		the room is the room of this room is ready event , 
+		the target status is READY ;

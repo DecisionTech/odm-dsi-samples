@@ -1,0 +1,13 @@
+when a patient enters room event occurs 
+if
+	the room status of 'the room' is READY 
+then 
+	set the room status of 'the room' to IN_USE  ; 
+	emit a new room status change event where 
+		the room is the room of this patient enters room event , 
+		the clinic is the clinic of this patient enters room event , 
+		the target status is IN_USE ; 
+else
+	emit a new clinic alert where 
+ 		the clinic is the clinic of 'the room' ,
+ 		the message is the room number of 'the room' + " is not ready and patient has entered!" ;

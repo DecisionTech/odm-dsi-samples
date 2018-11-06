@@ -1,16 +1,31 @@
 load entities from "exercise 1 entity loader"    ;
 
+<<<<<<< HEAD
 check that for the room identified by "Room 2" :
+=======
+check that for the room identified by "Room 2" : 
+>>>>>>> branch 'master' of https://github.com/DecisionTech/odm-dsi-samples.git
 	- the room status of this room is READY ;
 	
 submit events from "exercise 1 sequence 01"    ;
 
+<<<<<<< HEAD
 check that for the room identified by "Room 2" :
+=======
+check that for the room identified by "Room 2" : 
+>>>>>>> branch 'master' of https://github.com/DecisionTech/odm-dsi-samples.git
 	- the room status of this room is IN_USE  ;
 
 check that there are 1 room status change events in the events emitted 
 		by "clinic_scenario_agent_room_information"   	
+<<<<<<< HEAD
 	where the target status of each room status change event is IN_USE   ;
 	
 check that there are 0 clinic alerts in the events emitted
 	by "clinic_scenario_agent_room_information" ;
+=======
+	where the target status of each room status change event is IN_USE ;
+	
+check that there are 0 clinic alerts in the events emitted 
+		by "clinic_scenario_agent_room_information" ;
+>>>>>>> branch 'master' of https://github.com/DecisionTech/odm-dsi-samples.git

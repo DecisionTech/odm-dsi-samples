@@ -1,0 +1,7 @@
+using definitions from "exercise 1 entities"    ; 
+
+define 'Paient Enters Room 2' as a new patient enters room event where 
+	the clinic is 'College Park' , 
+	the room is room2  ; 
+	
+emit 'Paient Enters Room 2' , time-stamped 10/01/2018 8:58:13 AM ;
