@@ -1,16 +1,16 @@
 load entities from "exercise 1 entity loader"    ;
 
 check that for the room identified by "Room 2" :
-	- the room status of this room is READY ;
+	- the room status of this room is READY    ;
 	
-submit events from "exercise 1 sequence 01"    ;
+submit events from "exercise 1 sequence 02"    ;
 
 check that for the room identified by "Room 2" :
-	- the room status of this room is IN_USE  ;
+	- the room status of this room is NOT READY  ;
 
 check that there are 1 room status change events in the events emitted 
 		by "clinic_scenario_agent_room_information"   	
-	where the target status of each room status change event is IN_USE   ;
+	where the target status of each room status change event is NOT READY  ;
 	
 check that there are 0 clinic alerts in the events emitted
 	by "clinic_scenario_agent_room_information" ;
