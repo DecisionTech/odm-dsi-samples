@@ -1,0 +1,17 @@
+// Connectivity definitions for the solution
+// Connectivity definitions for the solution
+define outbound binding 'HTTPTransactionOutput' 
+   with 
+      description "HTTP Transaction Output" ,
+   using 
+      message format application/json  , 
+   protocol HTTP , 
+   delivering events :  
+     - clinic alert .  
+
+define outbound HTTP endpoint 'HTTPTransactionOutputEndPoint' 
+   with 
+      description "HTTP Transaction Output endpoint" ,
+   using 
+      binding 'HTTPTransactionOutput' , 
+   url "http://localhost:1880/clinic-event" .

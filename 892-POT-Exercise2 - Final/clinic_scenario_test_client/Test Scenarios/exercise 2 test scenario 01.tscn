@@ -1,0 +1,9 @@
+
+check that for the room identified by "Room 2" :
+	- the room status of this room is IN_USE    ;
+	
+submit events from "exercise 2 sequence 01"     ;
+	
+check that there are 1 clinic alerts in the events emitted
+	by "clinic_scenario_agent_room_information" 
+	where the message of each clinic alert is "Room 2 is not ready and patient has entered!";
