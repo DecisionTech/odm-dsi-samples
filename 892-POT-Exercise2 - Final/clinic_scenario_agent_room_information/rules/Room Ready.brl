@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>Room Ready</name>
+  <uuid>3f82db37-d732-4bdd-ac81-faf957596a4f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a room is ready event occurs 
+
+then 
+	set the room status of 'the room' to READY   ; 
+	emit a new room status change event where 
+		the room is the room of this room is ready event  , 
+		the clinic is the clinic of this room is ready event  , 
+		the target status is READY ; 
+]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

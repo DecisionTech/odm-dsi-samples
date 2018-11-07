@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: clinic_scenario_solution.clinic_scenario_agent_ro
+ om_information
+Bundle-Version: 0.0.0
+
