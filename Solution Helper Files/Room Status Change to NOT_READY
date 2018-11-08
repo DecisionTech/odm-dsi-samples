@@ -1,6 +1,6 @@
-when a clinic status change event occurs 
+when a room status change event occurs 
 if
-	the target status of this clinic status change event is NOT_READY  
+	the target status of this room status change event is NOT READY   
 then 
-	set the number of rooms NOT_READY of 'the clinic' to the number of rooms NOT_READY of the clinic of this clinic status change event + 1;
-	set the number of rooms IN_USE of 'the clinic' to the number of rooms IN_USE of the clinic of this clinic status change event - 1;
+	set the number of rooms NOT_READY of 'the clinic' to the number of rooms NOT_READY of the clinic of this room status change event  + 1;
+	set the number of rooms IN_USE of 'the clinic' to the number of rooms IN_USE of the clinic of this room status change event  - 1;
