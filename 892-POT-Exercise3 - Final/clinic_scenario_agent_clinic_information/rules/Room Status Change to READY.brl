@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>Room Status Change to READY</name>
+  <uuid>5d66a1f8-5a6c-4a8d-9798-856ef0a7920a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a room status change event occurs 
+if
+	the target status of this room status change event is READY 
+then 
+	set the number of rooms READY of 'the clinic' to 
+		the number of rooms READY of the clinic of this room status change event  + 1;
+	set the number of rooms NOT_READY of 'the clinic' to 
+		the number of rooms NOT_READY of the clinic of this room status change event  - 1;
+]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

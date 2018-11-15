@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>Patient Never Leaves Room</name>
+  <uuid>21bdb4f0-a465-404b-9b1d-2be51ba7fdee</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a patient enters room event has occurred 11 minutes ago 
+if
+	the room status of 'the room' is IN_USE 
+	and there are 0 patient leaves room events during the period between this patient enters room event and now 
+	where 'the room' is the room of each patient leaves room event ,
+then 
+	emit a new clinic alert where 
+ 		the clinic is the clinic of 'the room' ,
+ 		the message is "The patient has been in " + the room number of 'the room' + " for 11 minutes!" ;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>Patient Leaves</name>
+  <uuid>24498298-5e12-4593-ad91-35a3b5117e23</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a patient leaves room event occurs 
+ 
+then 
+	set the room status of 'the room' to NOT READY   ; 
+	emit a new room status change event where 
+		the room is the room of this patient leaves room event  , 
+		the clinic is the clinic of this patient leaves room event  , 
+		the target status is NOT READY ; 
+]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>

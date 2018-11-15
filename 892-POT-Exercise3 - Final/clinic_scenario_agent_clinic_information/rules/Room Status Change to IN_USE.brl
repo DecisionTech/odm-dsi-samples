@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ia.designer.berl:BerlRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ia.designer.berl="http://com.ibm.ia.designer/model/berl.ecore">
+  <name>Room Status Change to IN_USE</name>
+  <uuid>b848b00e-502c-44db-a02b-296788164ac2</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[when a room status change event  occurs 
+if
+	the target status of this room status change event is IN_USE 
+then 
+	set the number of rooms IN_USE of 'the clinic' to 
+		the number of rooms IN_USE of the clinic of this room status change event  + 1;
+	set the number of rooms READY of 'the clinic' to 
+		the number of rooms READY of the clinic of this room status change event  - 1;]]></definition>
+</com.ibm.ia.designer.berl:BerlRule>
