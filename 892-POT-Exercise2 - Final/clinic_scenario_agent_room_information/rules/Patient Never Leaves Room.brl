@@ -11,5 +11,5 @@ if
 then 
 	emit a new clinic alert where 
  		the clinic is the clinic of 'the room' ,
- 		the message is "The patient has been in " + the room number of 'the room' + " for 30 seconds!" ;]]></definition>
+ 		the message is "The patient has been in " + the room number of 'the room' + " for 11 minutes!" ;]]></definition>
 </com.ibm.ia.designer.berl:BerlRule>
