@@ -1,0 +1,11 @@
+# a clinic event is a business event time-stamped by a timestamp.
+a clinic event is related to a clinic.
+
+a room status change event is a clinic event.
+a room status change event has a target status (a room status).
+a room status change event is related to a room .
+
+a clinic alert is a clinic event.
+a clinic alert has a message.
+a clinic alert has a risk level.
+a risk level can be one of : LOW RISK, AT RISK, HIGH RISK.
